@@ -97,7 +97,9 @@ ENV BUNDLE_APP_CONFIG $GEM_HOME
 
 # install git 
 # 因为前端比较多同事使用windows
-RUN apt-get install -y git
+RUN apt-get update \
+    && apt-get install -y git \
+    && rm -rf /var/lib/apt/lists/* 
 
 # install sass 
 # sass: http://sass-lang.com/documentation/file.SASS_REFERENCE.html
