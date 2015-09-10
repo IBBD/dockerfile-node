@@ -95,6 +95,10 @@ ENV BUNDLE_APP_CONFIG $GEM_HOME
 # END of 安装Ruby
 ############################################################################
 
+# install git 
+# 因为前端比较多同事使用windows
+RUN apt-get install -y git
+
 # install sass 
 # sass: http://sass-lang.com/documentation/file.SASS_REFERENCE.html
 RUN gem install sass 
@@ -118,10 +122,6 @@ RUN npm install --global gulp \
     && npm install -g mocha \
     && npm install -g eslint \
     && npm install ghooks --save-dev
-
-# install git 
-# 因为前端比较多同事使用windows
-RUN apt-get install git
 
 # Define working directory.
 WORKDIR /var/www
