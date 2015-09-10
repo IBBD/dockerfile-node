@@ -97,21 +97,27 @@ ENV BUNDLE_APP_CONFIG $GEM_HOME
 
 # install sass 
 # sass: http://sass-lang.com/documentation/file.SASS_REFERENCE.html
-RUN gem install sass \
+RUN gem install sass 
+
+# 使用淘宝的npm镜像
+RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 # install 
+# glup:     https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
 # webpack:  http://webpack.github.io/docs/installation.html
 # babel:    https://babeljs.io/docs/setup/
 # react:    https://facebook.github.io/react/docs/getting-started.html
 # intern:   https://theintern.github.io/intern/
 # mocha:    http://mochajs.org/
 # eslint:   https://github.com/eslint/eslint
+# ghooks:   https://www.npmjs.com/package/ghooks
 RUN npm install --global gulp \
     && npm install webpack -g \
     && npm install -g babel \
     && npm install intern \
     && npm install -g mocha \
-    && npm install -g eslint
+    && npm install -g eslint \
+    && npm install ghooks --save-dev
 
 # Define working directory.
 WORKDIR /var/www
