@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 清除已有的
-name=node
+name=node-dev
 docker stop ibbd-$name 
 docker rm ibbd-$name 
 docker rmi ibbd/$name 

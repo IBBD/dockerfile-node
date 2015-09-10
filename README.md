@@ -1,6 +1,6 @@
 # Node For IBBD
 
-构建本地前端的node开发环境，包括Gulp等众多工具。
+构建本地前端的node开发环境，包括git, Ruby, Gulp等众多工具。
 
 ## 基础说明 
 

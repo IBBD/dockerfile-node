@@ -1,9 +1,9 @@
 #
-# Node Dockerfile
+# Node-dev Dockerfile
 #
-# https://github.com/ibbd/dockerfile-node
+# https://github.com/ibbd/dockerfile-node-dev
 #
-# sudo docker build -t ibbd/node ./
+# sudo docker build -t ibbd/node-dev ./
 #
 
 # Pull base image.
