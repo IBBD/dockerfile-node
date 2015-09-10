@@ -21,6 +21,7 @@ ADD ext/sources.list   /etc/apt/sources.list
 ############################################################################
 # BEGIN of 安装Ruby
 # copy from https://github.com/docker-library/ruby/blob/0cdec78d89e33750a4b796bd2c748f0d5a1ae654/2.2/slim/Dockerfile
+# 注意：RubyGems镜像已经替换成了淘宝的，具体见：http://ruby.taobao.org/
 ############################################################################
 
 RUN apt-get update \
@@ -71,6 +72,8 @@ RUN buildDeps=' \
     && ./configure --disable-install-doc \
     && make -j"$(nproc)" \
     && make install \
+    && gem sources --remove https://rubygems.org/ \
+    && gem sources -a https://ruby.taobao.org/ \
     && gem update --system $RUBYGEMS_VERSION \
     && rm -r /usr/src/ruby \
     && apt-get purge -y --auto-remove $buildDeps
