@@ -119,6 +119,10 @@ RUN npm install --global gulp \
     && npm install -g eslint \
     && npm install ghooks --save-dev
 
+# install git 
+# 因为前端比较多同事使用windows
+RUN apt-get install git
+
 # Define working directory.
 WORKDIR /var/www
 
