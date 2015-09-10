@@ -24,7 +24,7 @@
 
 ## 镜像 
 
-- 从Dockerfile构建：`sudo ./build.sh`
+- 从Dockerfile构建：`sudo ./build.sh`，构建之前确保先运行`./download.sh`下载阿里云的sources.list文件。
 - 从hub.docker.com获取：`sudo docker pull ibbd/node-dev`
 
 ## 运行镜像
