@@ -21,13 +21,6 @@ logs_path=/var/log/$name
 # ----- 配置目录  END --------------
 #-----------------------------------
 
-
-if [ ! -f ./Dockerfile ]
-then
-    echo "ERROR: $PWD is error."
-    exit 1
-fi
-
 #docker stop ibbd-$name 
 #docker rm ibbd-$name 
 
