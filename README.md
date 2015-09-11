@@ -1,19 +1,16 @@
 # Node For IBBD
 
-构建本地前端的node开发环境，包括git, Ruby, Gulp等众多工具。
+构建本地前端的node开发环境，包括git, Gulp等众多工具。
 
 ## 基础说明 
 
 - 基础镜像：node:0.12-slim
-- Ruby 2.2.3
-- RubyGems 2.4.8
 - 使用阿里云的source.list
-- npm镜像和RubyGems镜像都是使用淘宝的
-- git
+- npm镜像使用淘宝的
+- git, vim （开发环境）
 
 ## 已经安装的扩展
 
-- SASS
 - Gulp
 - webpack
 - babel
