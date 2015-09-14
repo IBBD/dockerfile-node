@@ -16,14 +16,14 @@ RUN mkdir -p /var/www
 # sources.list
 # git clone git@github.com:IBBD/docker-compose.git
 # 如果导致apt-get Install不成功，可以先注释这句
-ADD ext/sources.list   /etc/apt/sources.list
+#ADD ext/sources.list   /etc/apt/sources.list
 
 ###########################################################
 ######### BEGIN Ruby环境 ##################################
-######### Copy From: hub.docker.com/_/ruby/  2.2-slim
-######### 1. 将RubyGems的镜像替换为淘宝的
-######### 2. 安装sass
-######### 3. 安装compass
+######### Copy From: hub.docker.com/_/ruby/  2.2-slim  ####
+######### 1. 将RubyGems的镜像替换为淘宝的              ####
+######### 2. 安装sass                                  ####
+######### 3. 安装compass                               ####
 ###########################################################
 
 RUN apt-get update \
