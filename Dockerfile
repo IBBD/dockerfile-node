@@ -16,7 +16,7 @@ RUN mkdir -p /var/www
 # sources.list
 # git clone git@github.com:IBBD/docker-compose.git
 # 如果导致apt-get Install不成功，可以先注释这句
-#ADD ext/sources.list   /etc/apt/sources.list
+ADD ext/sources.list   /etc/apt/sources.list
 
 ###########################################################
 ######### BEGIN Ruby环境 ##################################
