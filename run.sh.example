@@ -28,5 +28,5 @@ sudo docker run -it --rm --name ibbd-$name \
     -v $code_path:/var/www \
     -v $logs_path:/var/log/node \
     ibbd/$name \
-    /bin/bash
+    tmux
 
