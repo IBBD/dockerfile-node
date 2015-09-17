@@ -1,6 +1,8 @@
-# Node For IBBD
+# 大前端开发环境构建
 
-构建本地前端的node开发环境，包括git, Gulp，Ruby，SASS等众多工具。
+构建本地前端的node开发环境，包括git, vim, Gulp，Ruby，SASS等众多工具。
+
+- 镜像地址：https://hub.docker.com/r/ibbd/node-dev
 
 ## 基础说明 
 
@@ -8,7 +10,7 @@
 - 使用阿里云的source.list
 - Ruby2.2.3
 - RubyGems镜像和npm镜像使用淘宝的
-- git, vim （开发环境）
+- 基本开发及文本工具：git, tmux, vim （含spf13-vim）
 
 ## 已经安装的扩展
 

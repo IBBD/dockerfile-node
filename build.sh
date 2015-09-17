@@ -2,10 +2,10 @@
 
 # 清除已有的
 name=node-dev
-docker stop ibbd-$name 
-docker rm ibbd-$name 
-docker rmi ibbd/$name 
+sudo docker stop ibbd-$name 
+sudo docker rm ibbd-$name 
+sudo docker rmi ibbd/$name 
 
 # 重新生成
-docker build -t ibbd/$name ./
+sudo docker build -t ibbd/$name ./
 
