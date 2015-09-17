@@ -103,13 +103,14 @@ ENV BUNDLE_APP_CONFIG $GEM_HOME
 # 因为前端比较多同事使用windows
 # install vim with spf13-vim
 RUN apt-get update \
-    && apt-get install -y git \
+    && apt-get install -y git git-flow \
         vim \
         tmux \
     && curl http://j.mp/spf13-vim3 -L -o - | sh \
     && echo "set fileencodings=utf-8" >> /etc/vim/vimrc \
     && echo "set fileencoding=utf-8" >> /etc/vim/vimrc \
     && echo "set encoding=utf-8" >> /etc/vim/vimrc \
+    && git config --global push.default simple \
     && rm -rf /var/lib/apt/lists/* 
 
 # 使用淘宝的npm镜像
