@@ -10,7 +10,6 @@
 - 使用阿里云的source.list
 - Ruby2.2.3
 - RubyGems镜像和npm镜像使用淘宝的
-- 基本开发及文本工具：git, tmux, vim （含spf13-vim）
 
 ## 已经安装的扩展
 
