@@ -1,6 +1,6 @@
 # 大前端开发环境构建
 
-构建本地前端的node开发环境，包括git, vim, Gulp，Ruby，SASS等众多工具。
+构建本地前端的node开发环境，包括Gulp，Ruby，SASS等众多工具. 如果需要开发工具，请使用镜像`docker pull ibbd/base-dev-tools`
 
 - 镜像地址：https://hub.docker.com/r/ibbd/node-dev
 
@@ -26,11 +26,11 @@
 
 ## 镜像 
 
-- 从Dockerfile构建：`sudo ./build.sh`，构建之前确保先运行`./download.sh`下载阿里云的sources.list文件。
-- 从hub.docker.com获取：`sudo docker pull ibbd/node-dev`
+- 从Dockerfile构建：`./build.sh`，构建之前确保先运行`./download.sh`下载阿里云的sources.list文件。
+- 从hub.docker.com获取：`docker pull ibbd/node-dev`
 
 ## 运行镜像
 
-- `sudo ./run.sh`
+- `./run.sh`
 
 
