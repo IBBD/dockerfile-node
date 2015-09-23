@@ -1,6 +1,6 @@
 # 大前端开发环境构建
 
-构建本地前端的node开发环境，包括Gulp，Ruby，SASS等众多工具. 如果需要开发工具，请使用镜像`docker pull ibbd/base-dev-tools`
+构建本地前端的node开发环境，包括Gulp，Ruby，SASS等众多工具. 
 
 - 镜像地址：https://hub.docker.com/r/ibbd/node-dev
 
