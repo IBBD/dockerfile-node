@@ -99,21 +99,6 @@ ENV BUNDLE_APP_CONFIG $GEM_HOME
 ######### END Ruby环境 ####################################
 ###########################################################
 
-# install git 
-# 因为前端比较多同事使用windows
-# install vim with spf13-vim
-# 开发请用镜像：ibbd/base-dev-tools
-#RUN apt-get update \
-    #&& apt-get install -y git git-flow \
-        #vim \
-        #tmux \
-    #&& curl http://j.mp/spf13-vim3 -L -o - | sh \
-    #&& echo "set fileencodings=utf-8" >> /etc/vim/vimrc \
-    #&& echo "set fileencoding=utf-8" >> /etc/vim/vimrc \
-    #&& echo "set encoding=utf-8" >> /etc/vim/vimrc \
-    #&& git config --global push.default simple \
-    #&& rm -rf /var/lib/apt/lists/* 
-
 # 使用淘宝的npm镜像
 RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 
@@ -127,7 +112,7 @@ RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 # eslint:   https://github.com/eslint/eslint
 # ghooks:   https://www.npmjs.com/package/ghooks
 RUN npm install --global gulp \
-    && npm install webpack -g \
+    && npm install -g webpack \
     && npm install -g babel \
     && npm install intern \
     && npm install -g mocha \
