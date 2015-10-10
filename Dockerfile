@@ -116,6 +116,9 @@ RUN npm install --global gulp \
     && npm install -g babel \
     && npm install -g bower \
     && npm install -g grunt-cli \
+    && npm install -g browserify \
+    && npm install -g component \
+    && npm install -g duo \
     && npm install intern \
     && npm install -g mocha \
     && npm install -g eslint \

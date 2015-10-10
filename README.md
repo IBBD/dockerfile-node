@@ -24,6 +24,9 @@
 - Compass
 - bower 
 - grunt
+- browserify
+- component
+- duo
 
 ## 镜像 
 
