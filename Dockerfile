@@ -114,6 +114,8 @@ RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 RUN npm install --global gulp \
     && npm install -g webpack \
     && npm install -g babel \
+    && npm install -g bower \
+    && npm install -g grunt-cli \
     && npm install intern \
     && npm install -g mocha \
     && npm install -g eslint \

@@ -22,6 +22,8 @@
 - ghooks
 - SASS
 - Compass
+- bower 
+- grunt
 
 ## 镜像 
 
