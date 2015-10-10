@@ -116,7 +116,7 @@ ENV BUNDLE_APP_CONFIG $GEM_HOME
 RUN \
     apt-get update \
     && apt-get install -y --no-install-recommends git-core \
-    npm install -g cnpm --registry=https://registry.npm.taobao.org \
+    && npm install -g cnpm --registry=https://registry.npm.taobao.org \
     && npm install --global gulp \
     && npm install -g webpack \
     && npm install -g babel \
