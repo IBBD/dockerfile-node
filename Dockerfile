@@ -25,7 +25,6 @@ ADD ext/sources.list   /etc/apt/sources.list
 ######### 2. 安装sass                                  ####
 ######### 3. 安装compass                               ####
 ###########################################################
-# apt-get git-core
 # && gem sources --remove https://rubygems.org/ \
 # && gem sources -a https://ruby.taobao.org/ \
 # && gem install sass \
@@ -42,7 +41,6 @@ RUN apt-get update \
         libyaml-dev \
         procps \
         zlib1g-dev \
-        git-core \
     && rm -rf /var/lib/apt/lists/*
 
 ENV RUBY_MAJOR 2.2
@@ -116,6 +114,8 @@ ENV BUNDLE_APP_CONFIG $GEM_HOME
 # eslint:   https://github.com/eslint/eslint
 # ghooks:   https://www.npmjs.com/package/ghooks
 RUN \
+    apt-get update \
+    && apt-get install -y --no-install-recommends git-core \
     npm install -g cnpm --registry=https://registry.npm.taobao.org \
     && npm install --global gulp \
     && npm install -g webpack \
@@ -128,7 +128,9 @@ RUN \
     && npm install intern \
     && npm install -g mocha \
     && npm install -g eslint \
-    && npm install ghooks --save-dev 
+    && npm install ghooks --save-dev \
+    && apt-get purge -y --auto-remove git-core \
+    && rm -rf /var/lib/apt/lists/*
 
 # Define working directory.
 WORKDIR /var/www
