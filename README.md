@@ -29,7 +29,9 @@
 - component
 - duo
 - react-tools
-
+- yeoman
+- Jasmine
+- Karma
 
 ## 镜像 
 

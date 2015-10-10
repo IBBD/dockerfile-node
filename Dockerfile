@@ -113,22 +113,26 @@ ENV BUNDLE_APP_CONFIG $GEM_HOME
 # mocha:    http://mochajs.org/
 # eslint:   https://github.com/eslint/eslint
 # ghooks:   https://www.npmjs.com/package/ghooks
+# jasmine:  https://github.com/jasmine/jasmine-npm
 RUN \
     apt-get update \
     && apt-get install -y --no-install-recommends git-core \
     && npm install -g cnpm --registry=https://registry.npm.taobao.org \
     && npm install --global gulp \
     && npm install -g webpack \
-    && npm install -g babel \
-    && npm install -g bower \
-    && npm install -g grunt-cli \
-    && npm install -g browserify \
-    && npm install -g component \
-    && npm install -g duo \
+        jasmine \
+        yo \
+        karma karma-cli \
+        grunt grunt-cli
+        babel \
+        bower \
+        browserify \
+        component \
+        duo \
+        mocha \
+        eslint \
+        react-tools \
     && npm install intern \
-    && npm install -g mocha \
-    && npm install -g eslint \
-    && npm install -g react-tools \
     && npm install ghooks --save-dev \
     && apt-get purge -y --auto-remove git-core \
     && rm -rf /var/lib/apt/lists/*
