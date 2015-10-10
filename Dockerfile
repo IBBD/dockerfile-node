@@ -128,6 +128,7 @@ RUN \
     && npm install intern \
     && npm install -g mocha \
     && npm install -g eslint \
+    && npm install -g react-tools \
     && npm install ghooks --save-dev \
     && apt-get purge -y --auto-remove git-core \
     && rm -rf /var/lib/apt/lists/*

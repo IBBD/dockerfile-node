@@ -28,6 +28,8 @@
 - browserify
 - component
 - duo
+- react-tools
+
 
 ## 镜像 
 
