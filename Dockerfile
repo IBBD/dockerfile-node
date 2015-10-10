@@ -25,6 +25,11 @@ ADD ext/sources.list   /etc/apt/sources.list
 ######### 2. 安装sass                                  ####
 ######### 3. 安装compass                               ####
 ###########################################################
+# apt-get git-core
+# && gem sources --remove https://rubygems.org/ \
+# && gem sources -a https://ruby.taobao.org/ \
+# && gem install sass \
+# && gem install compass \
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -37,6 +42,7 @@ RUN apt-get update \
         libyaml-dev \
         procps \
         zlib1g-dev \
+        git-core \
     && rm -rf /var/lib/apt/lists/*
 
 ENV RUBY_MAJOR 2.2
@@ -99,10 +105,8 @@ ENV BUNDLE_APP_CONFIG $GEM_HOME
 ######### END Ruby环境 ####################################
 ###########################################################
 
-# 使用淘宝的npm镜像
-RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
-
 # install 
+# 使用淘宝的npm镜像
 # glup:     https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
 # webpack:  http://webpack.github.io/docs/installation.html
 # babel:    https://babeljs.io/docs/setup/
@@ -111,7 +115,9 @@ RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 # mocha:    http://mochajs.org/
 # eslint:   https://github.com/eslint/eslint
 # ghooks:   https://www.npmjs.com/package/ghooks
-RUN npm install --global gulp \
+RUN \
+    npm install -g cnpm --registry=https://registry.npm.taobao.org \
+    && npm install --global gulp \
     && npm install -g webpack \
     && npm install -g babel \
     && npm install -g bower \
@@ -122,7 +128,7 @@ RUN npm install --global gulp \
     && npm install intern \
     && npm install -g mocha \
     && npm install -g eslint \
-    && npm install ghooks --save-dev
+    && npm install ghooks --save-dev 
 
 # Define working directory.
 WORKDIR /var/www
@@ -130,9 +136,4 @@ WORKDIR /var/www
 # 解决时区问题
 env TZ "Asia/Shanghai"
 
-# Define default command.
-#CMD ["nginx"]
-
-# Expose ports.
-#EXPOSE 80
 

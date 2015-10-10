@@ -13,6 +13,7 @@
 
 ## 已经安装的扩展
 
+- git-core (安装component时需要)
 - Gulp
 - webpack
 - babel
