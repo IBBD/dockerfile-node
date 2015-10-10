@@ -105,6 +105,7 @@ ENV BUNDLE_APP_CONFIG $GEM_HOME
 
 # install 
 # 使用淘宝的npm镜像
+# 前端有时需要python的环境，而且npm安装的某些插件也需要
 # glup:     https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
 # webpack:  http://webpack.github.io/docs/installation.html
 # babel:    https://babeljs.io/docs/setup/
@@ -117,6 +118,7 @@ ENV BUNDLE_APP_CONFIG $GEM_HOME
 RUN \
     apt-get update \
     && apt-get install -y --no-install-recommends git-core \
+        python \
     && npm install -g cnpm --registry=https://registry.npm.taobao.org \
     && npm install --global gulp \
     && npm install -g webpack \

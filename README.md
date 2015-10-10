@@ -10,6 +10,7 @@
 - 使用阿里云的source.list
 - Ruby2.2.3
 - RubyGems镜像和npm镜像使用淘宝的
+- Python2.7
 
 ## 已经安装的扩展
 
