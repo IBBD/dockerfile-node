@@ -18,6 +18,21 @@ RUN mkdir -p /var/www
 # 如果导致apt-get Install不成功，可以先注释这句
 ADD ext/sources.list   /etc/apt/sources.list
 
+# apt-get install
+RUN \
+    apt-get update \
+    && apt-get install -y --no-install-recommends \
+        ca-certificates \
+        apt-transport-https \
+        curl \
+        libssl-dev \
+        libyaml-dev \
+        git-core \
+        python \
+        bzip2 \
+        procps \
+        zlib1g-dev \
+
 # install 
 # 使用淘宝的npm镜像
 # 前端有时需要python的环境，而且npm安装的某些插件也需要
@@ -31,17 +46,16 @@ ADD ext/sources.list   /etc/apt/sources.list
 # ghooks:   https://www.npmjs.com/package/ghooks
 # jasmine:  https://github.com/jasmine/jasmine-npm
 #     && npm install -g cnpm --registry=https://registry.npm.taobao.org \
+#     node-sass
+    #&& npm config set strict-ssl false \
+    #&& npm config set registry "http://registry.npmjs.org/" \
+    #&& npm install intern \
+    #&& npm install ghooks --save-dev \
 RUN \
-    buildDeps='autoconf gcc make g++' \
+    buildDeps='autoconf gcc make g++ build-essential' \
     && set -x \
     && apt-get update \
     && apt-get install -y --no-install-recommends $buildDeps \
-        ca-certificates \
-        curl \
-        libssl-dev \
-        libyaml-dev \
-        git-core \
-        python \
     && npm install -g \
         gulp \
         webpack \
@@ -58,9 +72,7 @@ RUN \
         eslint \
         react-tools \
         less \
-        node-sass \
-    && npm install intern \
-    && npm install ghooks --save-dev \
+        react-ui-builder \
     && apt-get purge -y --auto-remove $buildDeps \
     && rm -rf /var/lib/apt/lists/*
 

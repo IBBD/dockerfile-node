@@ -19,10 +19,7 @@
 - Gulp
 - webpack
 - babel
-- intern
 - mocha
-- eslint
-- ghooks
 - bower 
 - grunt
 - browserify
@@ -33,7 +30,7 @@
 - Jasmine
 - Karma
 - less
-- node-sass
+- react-ui-builder
 
 ## 镜像 
 
