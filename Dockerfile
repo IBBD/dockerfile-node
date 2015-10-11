@@ -43,7 +43,9 @@ RUN \
         python \
     && npm install -g cnpm --registry=https://registry.npm.taobao.org \
     && npm install --global gulp \
-    && npm install -g webpack \
+    && npm install -g \
+        node-gyp \
+        webpack \
         jasmine \
         yo \
         karma karma-cli \
