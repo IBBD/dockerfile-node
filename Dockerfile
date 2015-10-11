@@ -31,7 +31,7 @@ RUN \
         python \
         bzip2 \
         procps \
-        zlib1g-dev \
+        zlib1g-dev 
 
 # install 
 # 使用淘宝的npm镜像
@@ -54,7 +54,6 @@ RUN \
 RUN \
     buildDeps='autoconf gcc make g++ build-essential' \
     && set -x \
-    && apt-get update \
     && apt-get install -y --no-install-recommends $buildDeps \
     && npm install -g \
         gulp \
