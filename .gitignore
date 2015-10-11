@@ -1,2 +1,3 @@
 /.env.sh
 /run.sh
+/node-dev-ruby/run.sh
