@@ -11,10 +11,10 @@
 - Ruby2.2.3
 - RubyGems镜像和npm镜像使用淘宝的
 - Python2.7
+- git-core (安装component时需要)
 
 ## 已经安装的扩展
 
-- git-core (安装component时需要)
 - Gulp
 - webpack
 - babel
@@ -33,6 +33,7 @@
 - yeoman
 - Jasmine
 - Karma
+- less
 
 ## 镜像 
 

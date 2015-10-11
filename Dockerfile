@@ -134,9 +134,9 @@ RUN \
         mocha \
         eslint \
         react-tools \
+        less \
     && npm install intern \
     && npm install ghooks --save-dev \
-    && apt-get purge -y --auto-remove git-core \
     && rm -rf /var/lib/apt/lists/*
 
 # Define working directory.
