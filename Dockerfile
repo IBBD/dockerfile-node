@@ -31,8 +31,11 @@ ADD ext/sources.list   /etc/apt/sources.list
 # ghooks:   https://www.npmjs.com/package/ghooks
 # jasmine:  https://github.com/jasmine/jasmine-npm
 RUN \
-    apt-get update \
-    && apt-get install -y --no-install-recommends git-core \
+    buildDeps='gcc make' \
+    && set -x \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends $buildDeps \
+        git-core \
         python \
     && npm install -g cnpm --registry=https://registry.npm.taobao.org \
     && npm install --global gulp \
@@ -53,6 +56,7 @@ RUN \
         node-sass \
     && npm install intern \
     && npm install ghooks --save-dev \
+    && apt-get purge -y --auto-remove $buildDeps \
     && rm -rf /var/lib/apt/lists/*
 
 # Define working directory.

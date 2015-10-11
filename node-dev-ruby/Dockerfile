@@ -79,7 +79,8 @@ RUN buildDeps=' \
     && gem install compass \
     && gem update --system $RUBYGEMS_VERSION \
     && rm -r /usr/src/ruby \
-    && apt-get purge -y --auto-remove $buildDeps
+    && apt-get purge -y --auto-remove $buildDeps \
+    && rm -rf /var/lib/apt/lists/*
 
 # install things globally, for great justice
 ENV GEM_HOME /usr/local/bundle
