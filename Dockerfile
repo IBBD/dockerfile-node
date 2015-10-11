@@ -7,7 +7,7 @@
 #
 
 # Pull base image.
-FROM node:0.12-slim
+FROM node:4.1-slim
 
 MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 
@@ -40,7 +40,7 @@ RUN \
         jasmine \
         yo \
         karma karma-cli \
-        grunt grunt-cli
+        grunt grunt-cli \
         babel \
         bower \
         browserify \

@@ -6,7 +6,7 @@
 
 ## 基础说明 
 
-- 基础镜像：node:0.12-slim
+- 基础镜像：node:4.1-slim
 - 使用阿里云的source.list
 - Python2.7
 - git-core (安装component时需要)
