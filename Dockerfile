@@ -31,10 +31,14 @@ ADD ext/sources.list   /etc/apt/sources.list
 # ghooks:   https://www.npmjs.com/package/ghooks
 # jasmine:  https://github.com/jasmine/jasmine-npm
 RUN \
-    buildDeps='gcc make' \
+    buildDeps='gcc make g++' \
     && set -x \
     && apt-get update \
     && apt-get install -y --no-install-recommends $buildDeps \
+        ca-certificates \
+        curl \
+        libssl-dev \
+        libyaml-dev \
         git-core \
         python \
     && npm install -g cnpm --registry=https://registry.npm.taobao.org \
