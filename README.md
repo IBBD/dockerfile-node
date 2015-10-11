@@ -4,10 +4,13 @@
 
 - 镜像地址：https://hub.docker.com/r/ibbd/node-dev
 
+说明：本镜像不含sass和compass，因为这两者需要ruby的环境，而把ruby环境打包到该镜像，会导致该镜像太大了，构建耗时太久而且容易出错。如果需要可以使用子镜像：`ibbd/node-dev-ruby`
+
 ## 基础说明 
 
 - 基础镜像：node:4.1-slim
 - 使用阿里云的source.list
+- npm使用淘宝的源
 - Python2.7
 - git-core (安装component时需要)
 

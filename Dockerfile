@@ -31,7 +31,7 @@ ADD ext/sources.list   /etc/apt/sources.list
 # ghooks:   https://www.npmjs.com/package/ghooks
 # jasmine:  https://github.com/jasmine/jasmine-npm
 RUN \
-    buildDeps='gcc make g++' \
+    buildDeps='autoconf gcc make g++' \
     && set -x \
     && apt-get update \
     && apt-get install -y --no-install-recommends $buildDeps \

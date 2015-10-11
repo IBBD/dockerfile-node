@@ -8,7 +8,7 @@
 
 - 基础镜像：node-dev-ruby 
 - Ruby2.2.3
-- RubyGems镜像和npm镜像使用淘宝的
+- RubyGems镜像使用淘宝的
 
 ## 已经安装的扩展
 
