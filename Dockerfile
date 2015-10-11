@@ -30,6 +30,7 @@ ADD ext/sources.list   /etc/apt/sources.list
 # eslint:   https://github.com/eslint/eslint
 # ghooks:   https://www.npmjs.com/package/ghooks
 # jasmine:  https://github.com/jasmine/jasmine-npm
+#     && npm install -g cnpm --registry=https://registry.npm.taobao.org \
 RUN \
     buildDeps='autoconf gcc make g++' \
     && set -x \
@@ -41,10 +42,8 @@ RUN \
         libyaml-dev \
         git-core \
         python \
-    && npm install -g cnpm --registry=https://registry.npm.taobao.org \
-    && npm install --global gulp \
     && npm install -g \
-        node-gyp \
+        gulp \
         webpack \
         jasmine \
         yo \
