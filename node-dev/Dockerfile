@@ -7,11 +7,9 @@
 #
 
 # Pull base image.
-FROM node:4.1-slim
+FROM ibbd/node
 
 MAINTAINER Alex Cai "cyy0523xc@gmail.com"
-
-RUN mkdir -p /var/www
 
 # apt-get install
 # git: component插件需要
