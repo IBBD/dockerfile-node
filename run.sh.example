@@ -9,7 +9,7 @@
 # ----- 配置目录  BEGIN ------------
 #-----------------------------------
 
-name=node-dev
+name=node
 
 # 代码目录
 code_path=/var/www

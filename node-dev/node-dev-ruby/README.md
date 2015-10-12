@@ -1,12 +1,13 @@
 # 大前端开发环境构建(含ruby)
 
-构建本地前端的node-ruby开发环境，主要在node-dev镜像的基础上，增加ruby，sass，compass等。
+构建本地前端的node-ruby开发环境，主要在ibbd/node-dev镜像的基础上，增加ruby，sass，compass等。
 
+- Github:   https://github.com/ibbd/dockerfile-node/node-dev/node-dev-ruby 
 - 镜像地址：https://hub.docker.com/r/ibbd/node-dev-ruby
 
 ## 基础说明 
 
-- 基础镜像：node-dev-ruby 
+- 基础镜像：ibbd/node-dev
 - Ruby2.2.3
 - RubyGems镜像使用淘宝的
 

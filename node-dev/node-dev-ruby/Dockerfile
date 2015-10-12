@@ -2,7 +2,7 @@
 # Node-dev-ruby Dockerfile
 # 安装ruby环境，及sass和compass
 #
-# https://github.com/ibbd/dockerfile-node-dev/node-dev-ruby
+# https://github.com/ibbd/dockerfile-node/node-dev/node-dev-ruby
 #
 # sudo docker build -t ibbd/node-dev-ruby ./
 #

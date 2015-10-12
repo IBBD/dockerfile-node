@@ -1,9 +1,9 @@
 #
-# Node-dev Dockerfile
+# Node基础环境 Dockerfile
 #
-# https://github.com/ibbd/dockerfile-node-dev
+# https://github.com/ibbd/dockerfile-node
 #
-# sudo docker build -t ibbd/node-dev ./
+# sudo docker build -t ibbd/node ./
 #
 
 # Pull base image.
@@ -18,62 +18,21 @@ RUN mkdir -p /var/www
 # 如果导致apt-get Install不成功，可以先注释这句
 ADD ext/sources.list   /etc/apt/sources.list
 
-# apt-get install
-RUN \
-    apt-get update \
-    && apt-get install -y --no-install-recommends \
-        ca-certificates \
-        apt-transport-https \
-        curl \
-        libssl-dev \
-        libyaml-dev \
-        git-core \
-        python \
-        bzip2 \
-        procps \
-        zlib1g-dev 
-
 # install 
 # 使用淘宝的npm镜像
-# 前端有时需要python的环境，而且npm安装的某些插件也需要
 # glup:     https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
 # webpack:  http://webpack.github.io/docs/installation.html
-# babel:    https://babeljs.io/docs/setup/
-# react:    https://facebook.github.io/react/docs/getting-started.html
-# intern:   https://theintern.github.io/intern/
-# mocha:    http://mochajs.org/
-# eslint:   https://github.com/eslint/eslint
-# ghooks:   https://www.npmjs.com/package/ghooks
-# jasmine:  https://github.com/jasmine/jasmine-npm
 #     && npm install -g cnpm --registry=https://registry.npm.taobao.org \
 #     node-sass
     #&& npm config set strict-ssl false \
     #&& npm config set registry "http://registry.npmjs.org/" \
-    #&& npm install intern \
-    #&& npm install ghooks --save-dev \
 RUN \
-    buildDeps='autoconf gcc make g++ build-essential' \
-    && set -x \
-    && apt-get install -y --no-install-recommends $buildDeps \
+    npm config set strict-ssl false \
+    && npm config set registry "http://registry.npmjs.org/" \
     && npm install -g \
         gulp \
         webpack \
-        jasmine \
-        yo \
-        karma karma-cli \
-        grunt grunt-cli \
-        babel \
-        bower \
-        browserify \
-        component \
-        duo \
-        mocha \
-        eslint \
-        react-tools \
-        less \
-        react-ui-builder \
-    && apt-get purge -y --auto-remove $buildDeps \
-    && rm -rf /var/lib/apt/lists/*
+        grunt grunt-cli
 
 # Define working directory.
 WORKDIR /var/www
