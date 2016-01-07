@@ -35,6 +35,7 @@ RUN \
 # react-ui-builder: reactjs组件的可视化构建工具. 执行react-ui-builder, 在浏览器打开http://localhost:2222/builder 
 # less:     提供lessc命令，less脚本编译器
 # duo:      安装不成功，暂时不用这个
+# antd-init: http://ant.design/docs/getting-started , antd是蚂蚁金服开放的react组件库, 这个是其命令行工具
 #     && npm install -g cnpm --registry=https://registry.npm.taobao.org \
         #duo \
 RUN \
@@ -51,5 +52,6 @@ RUN \
         react-tools \
         less \
         react-ui-builder \
-        node-sass 
+        node-sass \
+        antd-init
 
