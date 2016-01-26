@@ -7,7 +7,7 @@
 #
 
 # Pull base image.
-FROM node:4.1-slim
+FROM node:4.2.6-slim
 
 MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 
@@ -16,7 +16,7 @@ RUN mkdir -p /var/www
 # sources.list
 # git clone git@github.com:IBBD/docker-compose.git
 # 如果导致apt-get Install不成功，可以先注释这句
-ADD ext/sources.list   /etc/apt/sources.list
+#ADD ext/sources.list   /etc/apt/sources.list
 
 # install 
 # 使用淘宝的npm镜像

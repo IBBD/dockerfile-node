@@ -8,7 +8,7 @@
 ## 基础说明 
 
 - 基础镜像：ibbd/node-dev
-- Ruby2.2.3
+- Ruby2.3.0
 - RubyGems镜像使用淘宝的
 
 ## 已经安装的扩展
