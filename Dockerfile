@@ -7,16 +7,9 @@
 #
 
 # Pull base image.
-FROM node:4.3.1-slim
+FROM node:6.2-slim
 
 MAINTAINER Alex Cai "cyy0523xc@gmail.com"
-
-RUN mkdir -p /var/www
-
-# sources.list
-# git clone git@github.com:IBBD/docker-compose.git
-# 如果导致apt-get Install不成功，可以先注释这句
-#ADD ext/sources.list   /etc/apt/sources.list
 
 # install 
 # 使用淘宝的npm镜像
@@ -27,7 +20,12 @@ RUN mkdir -p /var/www
     #&& npm config set strict-ssl false \
     #&& npm config set registry "http://registry.npmjs.org/" \
 RUN \
-    npm config set strict-ssl false \
+    mkdir -p /var/www \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends \
+        git-core \
+    && rm -rf /var/lib/apt/lists/* \
+    && npm config set strict-ssl false \
     && npm config set registry "http://registry.npmjs.org/" \
     && npm install -g \
         gulp \
@@ -39,5 +37,3 @@ WORKDIR /var/www
 
 # 解决时区问题
 env TZ "Asia/Shanghai"
-
-

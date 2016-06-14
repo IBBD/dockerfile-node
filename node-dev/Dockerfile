@@ -18,7 +18,6 @@ RUN \
     apt-get update \
     && apt-get install -y --no-install-recommends \
         curl \
-        git-core \
         python \
     && rm -rf /var/lib/apt/lists/*
 

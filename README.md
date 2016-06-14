@@ -21,9 +21,7 @@
 
 ### 基础说明 
 
-- 基础镜像：node:4.2.6-slim
-- 使用阿里云的source.list
-- npm使用淘宝的源
+- 基础镜像：node:6.2-slim
 
 ### 已经安装的扩展
 
@@ -33,7 +31,6 @@
 
 ### 镜像 
 
-- 从Dockerfile构建：`./build.sh`，构建之前确保先运行`./download.sh`下载阿里云的sources.list文件。
 - 从hub.docker.com获取：`docker pull ibbd/node`
 
 ### 运行镜像
