@@ -30,6 +30,7 @@
 - less
 - react-ui-builder: http://www.open-open.com/lib/view/open1437049382943.html
 - node-sass
+- dva: https://github.com/dvajs/dva
 
 ## 镜像 
 
