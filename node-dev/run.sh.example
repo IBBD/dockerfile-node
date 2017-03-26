@@ -2,7 +2,7 @@
 # 
 # 运行：
 # cp ./run.sh.example ./run.sh
-# sudo ./run.sh
+# sudo ./run.sh 8000
 # 
 
 #-----------------------------------
@@ -17,6 +17,11 @@ code_path=/var/www
 # 日志目录
 logs_path=/var/log/node
 
+port=
+if [ $# = 1 ]; then
+    port="-p $1:$1"
+fi
+
 #-----------------------------------
 # ----- 配置目录  END --------------
 #-----------------------------------
@@ -24,6 +29,6 @@ logs_path=/var/log/node
 sudo docker run -it --rm --name ibbd-$name \
     -v $code_path:/var/www \
     -v $logs_path:/var/log/node \
-    ibbd/$name \
+    "$port" ibbd/$name \
     /bin/bash
 
