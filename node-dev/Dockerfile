@@ -52,7 +52,7 @@ RUN \
         less \
         react-ui-builder \
         node-sass \
-        antd-init \
+        antd \
         dva-cli
 
 # 替换为淘宝的镜像
