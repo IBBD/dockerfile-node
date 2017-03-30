@@ -31,7 +31,7 @@
 - react-ui-builder: http://www.open-open.com/lib/view/open1437049382943.html
 - node-sass
 - dva: https://github.com/dvajs/dva
-- yarn: 新型包管理工具
+- yarn: 新型包管理工具（默认已经包含了）
 - create-react-app
 
 ## 镜像 

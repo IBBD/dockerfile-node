@@ -54,7 +54,6 @@ RUN \
         node-sass \
         antd \
         dva-cli \
-        yarn \
         create-react-app
 
 # 替换为淘宝的镜像
