@@ -32,6 +32,7 @@
 - node-sass
 - dva: https://github.com/dvajs/dva
 - yarn: 新型包管理工具
+- create-react-app
 
 ## 镜像 
 

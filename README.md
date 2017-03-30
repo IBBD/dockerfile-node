@@ -9,7 +9,7 @@
 
 ## 修改记录
 
-- 2017-03-29 增加yarn包管理工具在`node-dev`中
+- 2017-03-29 增加`yarn`包管理工具和`create-react-app`, 在`node-dev`中
 - 2017-03-26 版本更新为6.10 LTS，在`node-dev`增加`dev-cli`
 - 2015-06-26 版本改为4.4
 - 2016-06-14 nodejs的版本更新到4.4.5 LTS, git移到node镜像，优化镜像层级
