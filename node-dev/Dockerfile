@@ -53,7 +53,8 @@ RUN \
         react-ui-builder \
         node-sass \
         antd \
-        dva-cli
+        dva-cli \
+        yarn
 
 # 替换为淘宝的镜像
 #RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
