@@ -54,7 +54,8 @@ RUN \
         node-sass \
         antd \
         dva-cli \
-        create-react-app
+        create-react-app \
+        react-apollo
 
 # 替换为淘宝的镜像
 #RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
