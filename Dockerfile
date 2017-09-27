@@ -24,13 +24,14 @@ RUN \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
         git-core \
-    && rm -rf /var/lib/apt/lists/* \
     && npm config set strict-ssl false \
     && npm config set registry "http://registry.npmjs.org/" \
     && npm install -g \
         gulp \
         webpack \
-        grunt grunt-cli
+        grunt grunt-cli \
+    && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && rm -rf /var/lib/apt/lists/*
 
 # Define working directory.
 WORKDIR /var/www
