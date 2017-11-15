@@ -1,0 +1,23 @@
+#
+# Node基础环境 Dockerfile
+#
+# https://github.com/ibbd/dockerfile-node
+#
+# sudo docker build -t ibbd/node ./
+#
+
+# Pull base image.
+FROM registry.cn-hangzhou.aliyuncs.com/ibbd/node
+
+RUN apt-get update \
+    && apt-get install -y --force-yes --no-install-recommends \
+        libcairo2-dev \
+        libjpeg-dev \
+        libpango1.0-dev \
+        libgif-dev \
+        build-essential g++ \
+        fonts-wqy-microhei \
+        ttf-wqy-zenhei \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
