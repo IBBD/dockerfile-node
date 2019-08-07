@@ -15,7 +15,8 @@ MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 # Define working directory.
 WORKDIR /var/www
 
-RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && npm install -g cnpm
 
 # 终端设置
 ENV TERM xterm
