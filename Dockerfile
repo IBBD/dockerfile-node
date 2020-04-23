@@ -7,7 +7,7 @@
 #
 
 # Pull base image.
-FROM node:8-slim
+FROM node:12-slim
 
 MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 
