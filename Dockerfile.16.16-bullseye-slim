@@ -1,0 +1,13 @@
+#
+# 
+#
+
+ARG NODE_VERSION="16.16-bullseye-slim"
+FROM node:${NODE_VERSION}
+
+# 终端设置
+ENV TERM xterm
+
+# 解决时区问题
+ENV TZ "Asia/Shanghai"
+
